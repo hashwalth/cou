@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Oswald:wght@500&display=swap');
+
+@font-face {
+    font-family: Oswald;
+    src: url(./asset/fonts/Oswald-Regular.ttf);
+}
+/*L'etoile donne du style a tous les elements */
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+body{
+    /*( viewport height )VH= 100% de la taille de l'ecran  */
+    min-height: 100vh;
+    font-family: 'Josefin Sans', Verdana;
+    background: url(./asset/img/bg.jpg) center/cover;
+}
+
+h1{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+   /* les tailles de polices doivent etre en REM */
+    font-size: 4vw; /*viewport width*/
+    text-shadow: 1px 3px 7px #00000074;
+    color: #f700ff;
+    font-family: 'Oswald', sans-serif;
+}
+
+main{
+    min-height: 500px;
+    background: #e0dedeba;
+    width: 90%;
+    /*centre une boite */
+    margin: 0 auto;
+    border: 2px solid #00eeff;
+    border-radius: 0.5rem 0.5rem 0 0;
+    box-shadow: 1px 0px 20px 4px #b6f8f7dc;
+    /*marge interieur*/
+    padding: 15px;
+}
+
+h2{
+   margin: 0;
+}
+
+.flex-box, .grid, .absolute{
+    border: 2px solid #0022ff;
+    border-radius: 0.5rem;
+    padding: 10px;
+    margin-top: 20px;
+    min-height: 150PX;
+}
+
+/*FLEXBOX*/
+/* sert a repartir equitablement des elements sur la page */
+
+.flex-box ul{
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-box li {
+    list-style: none; /* pour enlever le point de liste*/
+    height: 160px;
+    width: 160px;
+    margin: 10px;
+    background: turquoise;
+    /* centrer un unique element verticalement et horizontalement*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* GRID */
+
+.grig-container{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.grid img{
+    width: 90%;
+    display: block;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "i1 i2"
+    "ta ta"
+    "vi bt"
+    ;
+}
+input, textarea{
+    margin: 5px;
+    border: 1px solid darkblue;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-family: 'Josefin Sans', Verdana;
+    text-transform: capitalize;
+}
+
+textarea{
+    grid-area: ta;
+    height: 40px;
+    resize: none;
+}
+
+#btn-sub{
+    grid-area: bt;
+    cursor: pointer;
+    background: aqua;
+    transition: 0.2s;
+}
+
+#btn-sub:hover{
+    background: #0022ff;
+    color: white;
+}
+
+/*ABSOLUTE*/
+.absolute{
+    position: relative;
+}
+
+#cercle{
+    height: 60px;
+    width: 60px;
+    background: skyblue;
+    position: absolute;
+    border-radius: 150px;
+    top: 0;
+    right: 0;
+}
+
+#cercle2{
+    height: 40px;
+    width: 40px;
+    border-radius: 150px;
+    background: teal;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 100px;
+}
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 900px) {
+    .grig-container{
+        display:block;
+    }
+
+    .grig-container img {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .flex-box ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    form{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "i1"
+        "i2"
+        "ta"
+        "bt";
+    }
+}

@@ -1,0 +1,36 @@
+#joueurs-liste {
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  #joueurs {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .joueur {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .joueur img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .joueur .classement {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .joueur .nom {
+    flex: 1;
+  }
+  
+  .joueur .score {
+    font-weight: bold;
+  }
+  

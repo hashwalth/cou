@@ -1,0 +1,154 @@
+// Définition des cartes et de leurs informations
+const cards = [
+    {
+      name: "Loup Garou",
+      image: "../img/loupgarou.jpg",
+      description: "Chaque nuit, ils dévorent un Villageois. Le jour, ils essaient de masquer leur identité nocturne pour échapper à la vindicte populaire."
+    },
+    {
+        name: "Loup Garou",
+        image: "../img/loupgarou.jpg",
+        description: "Chaque nuit, ils dévorent un Villageois. Le jour, ils essaient de masquer leur identité nocturne pour échapper à la vindicte populaire."
+      },
+    {
+        name: "Loup Garou",
+        image: "../img/loupgarou.jpg",
+        description: "Chaque nuit, ils dévorent un Villageois. Le jour, ils essaient de masquer leur identité nocturne pour échapper à la vindicte populaire."
+      },
+    {
+          name: "Loup Garou",
+          image: "../img/loupgarou.jpg",
+          description: "Chaque nuit, ils dévorent un Villageois. Le jour, ils essaient de masquer leur identité nocturne pour échapper à la vindicte populaire."
+        },
+    {
+      name: "Voyante",
+      image: "../img/LaVoyante.jpg",
+      description: "Chaque nuit, elle découvre la vraie personnalité d’un joueur de son choix. Elle doit aider les autres Villageois, mais rester discrète pour ne pas être démasquée par les Loups-Garous."
+    },
+    {
+      name: "Chasseur",
+      image: "../img/Chasseur.png",
+      description: "S’il se fait dévorer par les Loups-Garous ou exécuter malencontreusement par les joueurs, le Chasseur doit répliquer avant de rendre l’âme, en éliminant immédiatement n’importe quel autre joueur de son choix."
+    },
+    {
+      name:"Cupidon",
+      image:"../img/Cupidon.png",
+      description:"En décochant ses célèbres flèches magiques, Cupidon a le pouvoir de rendre 2 personnes amoureuses à jamais."  
+    },
+      {
+        name:"Sorcière",
+        image:"../img/LaSorcière.png",
+        description:"Elle sait concocter 2 potions extrêmement puissantes :une potion de guérison, pour ressusciter le joueur tué par les Loups-Garous, une potion d’empoisonnement, utilisée la nuit pour éliminer un joueur.La Sorcière doit utiliser chaque potion 1 seule fois dans la partie. Elle peut se servir des ses 2 potions la même nuit. Le matin suivant l’usage de ce pouvoir, il pourra donc y avoir soit 0 mort, 1 mort ou 2 morts.La Sorcière peut utiliser les potions à son profit, et donc se guérir elle-même si elle vient d’être attaquée par les Loups-Garous."  
+      },
+      {
+        name:"Petite Fille",
+        image:"../img/petitefille.jpg",
+        description:"La Petite Fille peut, en entrouvrant les yeux, espionner les Loups-Garous pendant leur réveil. Si elle se fait surprendre par un des Loups-Garous, elle meurt immédiatement (en silence), à la place de la victime désignée. La Petite Fille ne peut espionner que la nuit, durant le tour d’éveil des Loups-Garous. Elle n’a pas le droit de se faire passer pour un Loup-Garou et d’ouvrir grand les yeux."  
+      },
+      {
+        name:"Capitaine",
+        image:"../img/LeCapitaine.png",
+        description:"Cette carte est confiée à un des joueurs, en plus de sa carte personnage. Le Capitaine est élu par vote, à la majorité relative. On ne peut refuser l’honneur d’être Capitaine. Dorénavant, les votes de ce joueur comptent pour 2 voix. Si ce joueur se fait éliminer, dans son dernier souffle il désigne son successeur."  
+      },
+      {
+        name:"Voleur",
+        image:"../img/Voleur.png",
+        description:"Si on veut jouer le Voleur, il faut ajouter deux cartes Simples Villageois en plus de toutes celles déjà choisies.Après la distribution, les deux cartes non distribuées sont placées au centre de la table faces cachées. La première nuit, le Voleur pourra prendre connaissance de ces deux cartes, et échanger sa carte contre une des deux autres."  
+      },
+      {
+        name:"Simple Villageois",
+        image:"../img/SimpleVillageois.jpg",
+        description:"Il n’a aucune compétence particulière. Ses seules armes sont la capacité d’analyse des comportements pour identifier les Loups-Garous, et la force de conviction pour empêcher l’exécution de l’innocent qu’il est."  
+      },
+      {
+        name:"Simple Villageois",
+        image:"../img/SimpleVillageois.jpg",
+        description:"Il n’a aucune compétence particulière. Ses seules armes sont la capacité d’analyse des comportements pour identifier les Loups-Garous, et la force de conviction pour empêcher l’exécution de l’innocent qu’il est."  
+      },
+      {
+        name:"Simple Villageois",
+        image:"../img/SimpleVillageois.jpg",
+        description:"Il n’a aucune compétence particulière. Ses seules armes sont la capacité d’analyse des comportements pour identifier les Loups-Garous, et la force de conviction pour empêcher l’exécution de l’innocent qu’il est."  
+      },
+      {
+        name:"Simple Villageois",
+        image:"../img/SimpleVillageois.jpg",
+        description:"Il n’a aucune compétence particulière. Ses seules armes sont la capacité d’analyse des comportements pour identifier les Loups-Garous, et la force de conviction pour empêcher l’exécution de l’innocent qu’il est."  
+      },
+      {
+        name:"Simple Villageois",
+        image:"../img/SimpleVillageois.jpg",
+        description:"Il n’a aucune compétence particulière. Ses seules armes sont la capacité d’analyse des comportements pour identifier les Loups-Garous, et la force de conviction pour empêcher l’exécution de l’innocent qu’il est."  
+      },
+      {
+        name:"Simple Villageois",
+        image:"../img/SimpleVillageois.jpg",
+        description:"Il n’a aucune compétence particulière. Ses seules armes sont la capacité d’analyse des comportements pour identifier les Loups-Garous, et la force de conviction pour empêcher l’exécution de l’innocent qu’il est."  
+      },
+      {
+        name:"Simple Villageois",
+        image:"../img/SimpleVillageois.jpg",
+        description:"Il n’a aucune compétence particulière. Ses seules armes sont la capacité d’analyse des comportements pour identifier les Loups-Garous, et la force de conviction pour empêcher l’exécution de l’innocent qu’il est."  
+      },
+      {
+        name:"Simple Villageois",
+        image:"../img/SimpleVillageois.jpg",
+        description:"Il n’a aucune compétence particulière. Ses seules armes sont la capacité d’analyse des comportements pour identifier les Loups-Garous, et la force de conviction pour empêcher l’exécution de l’innocent qu’il est."  
+      },
+      {
+        name:"Simple Villageois",
+        image:"../img/SimpleVillageois.jpg",
+        description:"Il n’a aucune compétence particulière. Ses seules armes sont la capacité d’analyse des comportements pour identifier les Loups-Garous, et la force de conviction pour empêcher l’exécution de l’innocent qu’il est."  
+      },
+      {
+        name:"Simple Villageois",
+        image:"../img/SimpleVillageois.jpg",
+        description:"Il n’a aucune compétence particulière. Ses seules armes sont la capacité d’analyse des comportements pour identifier les Loups-Garous, et la force de conviction pour empêcher l’exécution de l’innocent qu’il est."  
+      },
+      {
+        name:"Simple Villageois",
+        image:"../img/SimpleVillageois.jpg",
+        description:"Il n’a aucune compétence particulière. Ses seules armes sont la capacité d’analyse des comportements pour identifier les Loups-Garous, et la force de conviction pour empêcher l’exécution de l’innocent qu’il est."  
+      },
+      {
+        name:"Simple Villageois",
+        image:"../img/SimpleVillageois.jpg",
+        description:"Il n’a aucune compétence particulière. Ses seules armes sont la capacité d’analyse des comportements pour identifier les Loups-Garous, et la force de conviction pour empêcher l’exécution de l’innocent qu’il est."  
+      },
+      {
+        name:"Simple Villageois",
+        image:"../img/SimpleVillageois.jpg",
+        description:"Il n’a aucune compétence particulière. Ses seules armes sont la capacité d’analyse des comportements pour identifier les Loups-Garous, et la force de conviction pour empêcher l’exécution de l’innocent qu’il est."  
+      },
+    
+    
+  ];
+  
+ 
+// Mélange aléatoire des cartes
+function shuffle(array) {
+    let currentIndex = array.length, temporaryValue, randomIndex;
+    while (currentIndex !== 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+    return array;
+  }
+  
+  // Fonction pour révéler la carte de l'utilisateur lorsqu'elle est cliquée
+  function revealCard() {
+    const cardElement = document.getElementsByClassName("card")[0];
+    cardElement.classList.add("revealed");
+    const cardInfo = getCardForUser();
+    cardElement.style.backgroundImage = `url(${cardInfo.image})`;
+    cardElement.innerHTML = `<div class="card-description">${cardInfo.description}</div>`;
+    cardElement.onclick = null; // Désactiver le clic après avoir révélé la carte de l'utilisateur
+  }
+  
+  // Obtenir une carte aléatoire pour l'utilisateur
+  function getCardForUser() {
+    const shuffledCards = shuffle(cards);
+    return shuffledCards[0];   }
